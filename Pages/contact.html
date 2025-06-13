@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hole in One Golf Resort - Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+      <div class="container header-container">
+      <div class="logo" tabindex="0">
+  <img src="images/Hole_In_One_Logo.png" alt="Hole in One Golf Resort Logo" class="logo-image" />
+  <span>Hole in One Golf Resort</span>
+</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-item">Home</a></li>
+          <li><a href="about.html" class="nav-item">About</a></li>
+          <li><a href="facilities.html" class="nav-item">Facilities</a></li>
+          <li><a href="packages.html" class="nav-item">Packages</a></li>
+          <li><a href="contact.html" class="nav-item">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="contact" class="contact container" tabindex="0" aria-label="Contact form">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/yourformid" method="POST" aria-describedby="contact-desc" id="contact-form">
+        <p id="contact-desc">Fill in the form below to ask for more information or arrange custom packages.</p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+
+        <button type="submit" class="btn primary-btn">Send Message</button>
+      </form>
+
+    <p id="success-message" style="color: green; display: none; margin-top: 1em;">
+      Message has been successfully sent.
+    </p>
+
+    <script>
+      const form = document.getElementById('contact-form');
+      const successMessage = document.getElementById('success-message');
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent page reload
+
+        // Show success message
+        successMessage.style.display = 'block';
+
+        // Reset form inputs
+        form.reset();
+      });
+    </script>
+
+      <address>
+        <p><strong>Hole in One Golf Resort</strong></p>
+        <p>123 Golf Lane, Algarve, Portugal</p>
+        <p>Phone: +351 123 456 789</p>
+        <p>Email: info@holeinonegolf.pt</p>
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 Hole in One Golf Resort. All rights reserved.</p>
+      <nav aria-label="Social media">
+        <ul class="social-links">
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Twitter">Twitter</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
